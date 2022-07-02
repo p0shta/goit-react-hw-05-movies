@@ -30,7 +30,7 @@ export default function MovieDetailsPage() {
 
     return (
         <main>
-            <Title title={'Film Details'}></Title>
+            <Title title={'Movie Details'}></Title>
 
             {loading && <Loader />}
             {error && <Error />}

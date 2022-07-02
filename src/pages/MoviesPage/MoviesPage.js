@@ -50,7 +50,7 @@ export default function MoviesPage() {
 
     return (
         <main>
-            <Title title={'Search film'}></Title>
+            <Title title={'Search movie'}></Title>
             <SearchForm handleSubmit={setQuery} />
 
             {loading && <Loader />}

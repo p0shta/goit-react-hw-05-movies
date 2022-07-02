@@ -1,0 +1,19 @@
+.info {
+    padding: 20px 0;
+    border-bottom: 2px solid #edf2f4;
+    border-top: 2px solid #edf2f4;
+}
+
+.infoTitle {
+    margin-bottom: 20px;
+}
+
+.link {
+    padding: 5px 0;
+}
+
+.list {
+    margin: 0;
+    padding: 0 0 0 20px;
+    list-style: circle;
+}

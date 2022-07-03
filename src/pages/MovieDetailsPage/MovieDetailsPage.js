@@ -41,11 +41,15 @@ export default function MovieDetailsPage() {
                 <div className={s.info}>
                     <p className={s.infoTitle}>Additional information:</p>
                     <ul className={s.list}>
-                        <li className={s.link}>
-                            <NavLink to="cast">Cast</NavLink>
+                        <li>
+                            <NavLink to="cast" className={s.link}>
+                                Cast
+                            </NavLink>
                         </li>
-                        <li className={s.link}>
-                            <NavLink to="reviews">Review</NavLink>
+                        <li>
+                            <NavLink to="reviews" className={s.link}>
+                                Review
+                            </NavLink>
                         </li>
                     </ul>
                 </div>

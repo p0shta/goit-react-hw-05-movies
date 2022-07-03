@@ -21,7 +21,8 @@ export default function Cast() {
 
     return (
         <>
-            <div>{loading && <Loader />}</div>
+            {loading && <Loader />}
+
             <ul className={s.list}>
                 {cast && cast.cast.map((char, idx) => <CastCard key={idx} data={char} />)}
             </ul>

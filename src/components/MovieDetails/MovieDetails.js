@@ -57,6 +57,6 @@ MovieDetails.propTypes = {
         release_date: PropTypes.string.isRequired,
         vote_average: PropTypes.number.isRequired,
         overview: PropTypes.string.isRequired,
-        poster_path: PropTypes.string.isRequired,
+        poster_path: PropTypes.string,
     }),
 };

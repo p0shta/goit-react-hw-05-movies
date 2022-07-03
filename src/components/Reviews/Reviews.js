@@ -20,20 +20,20 @@ export default function Reviews() {
 
     return (
         <>
-            <div>{loading && <Loader />}</div>
-            <ul className={s.list}>
-                {reviews &&
-                    (reviews.results.length > 0 ? (
-                        reviews.results.map(review => (
-                            <li key={review.id} className={s.item}>
-                                <h4>Author: {review.author}</h4>
-                                <p className={s.content}>Review: {review.content}</p>
-                            </li>
-                        ))
-                    ) : (
-                        <p>We don't have any reviews for this film.</p>
+            {loading && <Loader />}
+
+            {reviews && reviews.results.length > 0 ? (
+                <ul className={s.list}>
+                    {reviews.results.map(review => (
+                        <li key={review.id} className={s.item}>
+                            <h4>Author: {review.author}</h4>
+                            <p className={s.content}>Review: {review.content}</p>
+                        </li>
                     ))}
-            </ul>
+                </ul>
+            ) : (
+                <p className={s.resultTitle}>We don't have any reviews for this film.</p>
+            )}
         </>
     );
 }

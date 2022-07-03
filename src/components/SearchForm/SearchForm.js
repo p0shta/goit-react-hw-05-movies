@@ -1,10 +1,19 @@
 import PropTypes from 'prop-types';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import s from './SearchForm.module.css';
 
-export default function SearchForm({ handleSubmit }) {
+export default function SearchForm({ handleSubmit, movies }) {
+    const [searchParams] = useSearchParams();
+    const userQuery = searchParams.get('query');
     const [query, setQuery] = useState('');
+
+    useEffect(() => {
+        if (!movies) return setQuery('');
+
+        setQuery(userQuery);
+    }, [movies, userQuery]);
 
     const onChange = e => {
         setQuery(e.target.value);
@@ -19,7 +28,6 @@ export default function SearchForm({ handleSubmit }) {
         }
 
         handleSubmit(query);
-        setQuery('');
     };
     return (
         <form onSubmit={onSubmit} className={s.form}>
@@ -33,4 +41,5 @@ export default function SearchForm({ handleSubmit }) {
 
 SearchForm.propTypes = {
     handleSubmit: PropTypes.func.isRequired,
+    movies: PropTypes.object,
 };

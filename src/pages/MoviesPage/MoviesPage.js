@@ -51,7 +51,7 @@ export default function MoviesPage() {
     return (
         <main>
             <Title title={'Search movie'}></Title>
-            <SearchForm handleSubmit={setQuery} />
+            <SearchForm handleSubmit={setQuery} movies={movies} />
 
             {loading && <Loader />}
             {error && <Error />}

@@ -11,3 +11,8 @@
     font-size: 14px;
     margin-top: 10px;
 }
+
+.resultTitle {
+    padding: 20px 0;
+    border-bottom: 2px solid #edf2f4;
+}

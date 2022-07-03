@@ -19,7 +19,7 @@ export default function CastCard({ data }) {
 CastCard.propTypes = {
     data: PropTypes.shape({
         profile_path: PropTypes.string,
-        name: PropTypes.string,
-        character: PropTypes.string,
+        name: PropTypes.string.isRequired,
+        character: PropTypes.string.isRequired,
     }),
 };
